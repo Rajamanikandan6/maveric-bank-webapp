@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/entity/user';
-import { SignupService } from 'src/app/core/signup.service';
+import { SignupService } from 'src/app/signup/core/signup.service';
 
 @Component({
   selector: 'app-signup',
