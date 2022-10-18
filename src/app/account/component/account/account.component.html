@@ -1,8 +1,22 @@
 <html>
-  <br>
   <!-- <app-header></app-header> -->
-  <hr>
-        <div class="card shadow mt-5 mb-5">
+  <!-- <hr> -->
+  <br>
+  <!-- <div class="form-check form-check-inline alingclass my-5">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Current Accout</label>
+  </div>
+  <div class="form-check form-check-inline alingclass">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+    <label class="form-check-label" for="inlineCheckbox2">Savings Account</label>
+  </div>
+  <div class="form-check form-check-inline alingclass">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled checked>
+    <label class="form-check-label" for="inlineCheckbox3">(disabled)</label>
+  </div> -->
+
+    <div class="container my-5">
+        <div class="card shadow mb-5">
             <div class="card-header text-center">
                 <b>Account Details</b>
             </div>
@@ -13,11 +27,7 @@
                 <p *ngIf="account.balance.amount">Closing Balance : {{account.balance.amount}}</p>
             </div>
         </div>
-        
         <div class="card shadow mt-5 mb-5">
-          <div class="card-header text-center">
-            <b>Transaction Details</b>
-        </div>
             <div class="card-body">
                   <table class="table">
                     <thead class="thead-light">
@@ -46,5 +56,6 @@
                   </nav>
             </div>
         </div>
+    </div>
 <!-- <app-footer></app-footer> -->
 </html>

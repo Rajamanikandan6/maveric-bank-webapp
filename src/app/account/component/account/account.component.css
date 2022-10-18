@@ -1,4 +1,4 @@
-#desc_container{
+/* #desc_container{
     border: black;
     border-style: outset;
     box-shadow: 1px 1px 1px black;
@@ -15,4 +15,19 @@
 }
 #mktrans{
     text-align : right;
+} */
+
+#desc_container{
+    border: black;
+    border-style: outset;
+    box-shadow: 1px 1px 1px black;
+}
+
+#btn_logout{
+    position: fixed;
+    right: 0%;
+}
+
+.alingclass{
+    margin-left: 15%;
 }
