@@ -1,0 +1,11 @@
+.footer{
+   position: fixed;
+   bottom: 0%;
+   background-color:#214e8f;
+   width: 100%;
+   display: inline;  
+}
+.txt{
+   margin-left: 1%;
+   margin-top: 3%;
+}
