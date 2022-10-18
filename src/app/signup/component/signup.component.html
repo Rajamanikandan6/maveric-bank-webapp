@@ -1,6 +1,4 @@
 <!-- <app-header></app-header> -->
-<hr>
-<div ng-app = "myApp" class = "container-fluid" id="container_login">
   <div class = "form-group">
     <div class="javaerror" style="background-color: #ef0606;">
     </div>
@@ -8,11 +6,10 @@
     </div>
     </div>
    
+    <div ng-app = "myApp" class = "container-fluid" id="container_signup">   
     <div class="row">
       <div class="div_class">
         <form #loginform="ngForm" (ngSubmit)="userSignup()">
-          <br>
-        <br>
 
     
       <div class = "form-group my-4">
@@ -54,11 +51,9 @@
         <a href="/">Login</a>, if you have account 
        </div> 
        <br>
-      <hr class="hr my-3">
         
     </form>
   </div>
 </div>
 </div>
-<hr>
 <!-- <app-footer></app-footer> -->
