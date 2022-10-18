@@ -1,0 +1,35 @@
+html{
+    font-family: robot;
+}
+input{
+    width: 100%;
+}
+
+select{
+    width: 100%;
+}
+#btn_signup{
+    margin-left: 50%;
+    background-color: #214e8f;
+    color: white;
+    border: none;
+
+}
+
+.input_male{
+    margin-left: 25%;
+}
+
+.lbl_male{
+    margin-left: -180px;
+}
+
+#container_signup{
+    width:30%;
+    box-shadow: rgba(16, 16, 16, 0.35) 0px 3px 12px;    
+    transform: translate(-50%, -50%); 
+    border-radius:5px;
+    margin-top: 35%;
+    margin-left: 50%;
+    position: absolute;
+}
