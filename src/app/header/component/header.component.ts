@@ -13,10 +13,11 @@ export class HeaderComponent implements OnInit {
     // on route change to '/login', set the variable showHead to false
     router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
-          if (event['url'] == '/' || event['url'] == '/signup' ) {
+          if (event['url'] == '/login' || event['url'] == '/signup' ) {
             this.showLogout = false;
           } else {
             this.showLogout = true;
+            alert(this.showLogout);
           }
         }
       });
@@ -27,7 +28,7 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     localStorage.clear();
-    this.router.navigate(['/']);
+    this.router.navigate(['/login']);
   }
 
 }

@@ -8,6 +8,8 @@ import { AuthIntercaptor } from '../authentication/auth-intercaptor';
 import { AccountComponent } from './component/account/account.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HeaderModule } from '../header/header.module';
+import { FooterModule } from '../footer/footer.module';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     AccountRoutingModule,
     FormsModule,
     HttpClientModule,
+    HeaderModule,
+    FooterModule
   ],
   providers: [AuthGuard,{ provide: HTTP_INTERCEPTORS, useClass: AuthIntercaptor, multi: true }],
 })
