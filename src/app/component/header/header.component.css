@@ -1,0 +1,24 @@
+/* .head_comp{
+   position: fixed;
+   top: 0%;
+   width: 100%;
+} */
+
+.header{
+    /* margin-top: 220px; */
+    position: fixed;
+    top: 0%;
+    width: 100%;
+ }
+
+ .header_class{
+    margin-left: 0%;
+ }
+
+ hr{
+    /* border-color:black;
+    border-style: solid;  */
+        width: 100%;
+        position: fixed;
+        margin-top: 4%;
+}
