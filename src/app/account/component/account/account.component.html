@@ -21,9 +21,9 @@
             </div>
             <div class="card-body"> 
               <i class="bi bi-person-circle booticon"></i><p *ngIf="user.firstName">{{user.firstName}} {{user.lastName}} {{user.middleName}}</p>
-                <p *ngIf="account._id">Account No : {{account._id}}</p>
-                <p *ngIf="account.type">{{account.type}} Account</p>
-                <p *ngIf="account.balance.amount">Closing Balance : {{account.balance.amount}}</p>
+              <i class="bi bi-bank booticon"></i><p *ngIf="account._id">Account No : {{account._id}}</p>
+              <i class="bi bi-person-badge booticon"></i><p *ngIf="account.type">{{account.type}} Account</p>
+              <i class="bi bi-currency-rupee booticon"></i><p *ngIf="account.balance.amount">Closing Balance : {{account.balance.amount}}</p>
             </div>
         </div>
         <div class="card shadow mt-5 mb-5">
