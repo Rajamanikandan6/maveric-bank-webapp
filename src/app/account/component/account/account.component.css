@@ -31,3 +31,15 @@
 .alingclass{
     margin-left: 15%;
 }
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+  .booticon {
+    display: inline-block;
+    float: left;
+    padding:0px 5px 0px 0px;
+  }
