@@ -32,6 +32,12 @@
     margin-left: 15%;
 }
 
-.bck_clr{
-    background-color: aqua;
+.accnt_header{
+    background-color: #214e8f;
+    color: white;
+}
+
+.transaction_header{
+    background-color: #214e8f;
+    color: white;
 }
