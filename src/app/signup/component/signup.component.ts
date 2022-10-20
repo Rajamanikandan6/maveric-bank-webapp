@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { take } from 'rxjs';
 import { User } from 'src/app/entity/user';
 import { SignupService } from 'src/app/signup/core/signup.service';
 
@@ -18,7 +19,7 @@ export class SignupComponent implements OnInit {
   }
 
   userSignup(){
-    this.service.signupUserFromClient(this.user).subscribe(
+    this.service.signupUserFromClient(this.user).pipe(take(1)).subscribe(
       data => {
         localStorage.setItem('token',data.token)
         localStorage.setItem('userId',data.user.id)

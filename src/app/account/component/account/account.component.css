@@ -1,22 +1,3 @@
-/* #desc_container{
-    border: black;
-    border-style: outset;
-    box-shadow: 1px 1px 1px black;
-}
-
-#btn_logout{
-    position: fixed;
-    right: 0%;
-}
-.alingclass{
-
-    margin-left: 15%;
-
-}
-#mktrans{
-    text-align : right;
-} */
-
 #desc_container{
     border: black;
     border-style: outset;
@@ -32,6 +13,7 @@
     margin-left: 15%;
 }
 
+
 .accnt_header{
     background-color: #214e8f;
     color: white;
@@ -41,3 +23,9 @@
     background-color: #214e8f;
     color: white;
 }
+
+  .booticon {
+    display: inline-block;
+    float: left;
+    padding:0px 5px 0px 0px;
+  }

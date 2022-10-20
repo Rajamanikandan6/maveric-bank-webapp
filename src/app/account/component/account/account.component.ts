@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { take, takeUntil } from 'rxjs';
 import { AccountService } from 'src/app/account/core/account.service';
 import { Account } from 'src/app/entity/account';
 import { CustomerAccount } from 'src/app/entity/customer-account';
@@ -37,7 +38,7 @@ export class AccountComponent implements OnInit {
   previousTransaction(): void {
     if(this.page > 0){
       this.page=this.page-1;
-    this.service.getTransaction(this.account._id,this.page,this.pageSize).subscribe(
+    this.service.getTransaction(this.account._id,this.page,this.pageSize).pipe(take(1)).subscribe(
       data => { 
         this.account.transaction=data;
         var transHtml="";
@@ -60,7 +61,7 @@ export class AccountComponent implements OnInit {
 
   nextTransaction(): void {
     this.page=this.page+1;
-    this.service.getTransaction(this.account._id,this.page,this.pageSize).subscribe(
+    this.service.getTransaction(this.account._id,this.page,this.pageSize).pipe(take(1)).subscribe(
       data => { 
         this.account.transaction=data;
         var transHtml="";
@@ -83,28 +84,28 @@ export class AccountComponent implements OnInit {
   
 
   getAccountDetails(){
-    this.service.accountDetailsFromClient().subscribe(
+    this.service.accountDetailsFromClient().pipe(take(1)).subscribe(
        
       data => { 
-        let iddd = "";
+        let cus_id = "";
         let encoded: string="";
         this.customerAccount.account=data;
         for(var i=0;i<this.customerAccount.account.length;i++){
 
           this.typeArr[i]= this.customerAccount.account[i].type;
           if(this.param1 == undefined){
-            iddd=data[0]._id;
+            cus_id=data[0]._id;
           }else{
             encoded = atob(this.param1);
             if(encoded == this.customerAccount.account[i].type){
-              iddd=this.customerAccount.account[i]._id;
+              cus_id=this.customerAccount.account[i]._id;
               this.count=i;
             }
           }
         }
 
         // console.log("ttttttt",this.typeArr);
-        this.getAccBalance(iddd).then((data:any)=>{
+        this.getAccBalance(cus_id).then((data:any)=>{
          this.account.balance=data.balance;
          this.account._id=data._id;
          this.account.type=data.type;
@@ -114,7 +115,7 @@ export class AccountComponent implements OnInit {
         
 
        })
-        this.getTransaction(iddd,0,2).then((data:any)=>{
+        this.getTransaction(cus_id,0,2).then((data:any)=>{
           this.account.transaction=data;
       })
       
@@ -154,7 +155,7 @@ export class AccountComponent implements OnInit {
 
     getAccBalance(id:string){
       return new Promise(resolve=>{
-    this.service.getAccountAndBalance(id).subscribe(
+    this.service.getAccountAndBalance(id).pipe(take(1)).subscribe(
      (data:Account) => {
       resolve(data);} 
      
@@ -164,7 +165,7 @@ export class AccountComponent implements OnInit {
 
   getTransaction(id:string,page:number,pageSize:number){
     return new Promise(resolve=>{
-    this.service.getTransaction(id,page,pageSize).subscribe(
+    this.service.getTransaction(id,page,pageSize).pipe(take(1)).subscribe(
       (data:Account) => {
         resolve(data);} ,
       error => {return error} 

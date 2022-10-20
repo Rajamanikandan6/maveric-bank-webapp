@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
             this.showLogout = false;
           } else {
             this.showLogout = true;
-            alert(this.showLogout);
           }
         }
       });
