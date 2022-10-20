@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   userLogin(){
-  this._service.loginUserFromClient(this.user).subscribe(
+  this._service.loginUserFromClient(this.user).pipe(take(1)).subscribe(
     data => {
       localStorage.setItem('token',data.token)
       localStorage.setItem('userId',data.user.id)
