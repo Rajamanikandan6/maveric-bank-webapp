@@ -1,19 +1,19 @@
 <html>
-<app-header></app-header>
-  <div class = "form-group">
-    <div class="javaerror" style="background-color: #ef0606;">
-    </div>
-    <div class="javasuccess" style="background-color: #0bbd4c;">
-    </div>
-    </div>
-   
+<app-header></app-header>   
     <div ng-app = "myApp" class = "container-fluid" id="container_signup">   
     <div class="row">
       <div class="div_class my-4">
         <form #loginform="ngForm" (ngSubmit)="userSignup()"> 
 
           <label class="fw-bold">Sign up</label>
-            <div class="row gx-4 p-2 form-group my-4">
+          <div class = "form-group">
+            <div class="javaerror" style="color: red;position: fixed;">
+            </div>
+            <div class="javasuccess" style="background-color: #0bbd4c; position: fixed;">
+            </div>
+            </div>
+            
+            <div class="row gx-4 p-1 form-group my-4">
               <div class="col">
                 <input type = "text" id = "name" class = "form-control" placeholder = "*First Name " name="firstName" [(ngModel)] ="user.firstName">
               </div>

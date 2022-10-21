@@ -2,13 +2,13 @@
 <app-header></app-header>
 <div ng-app="myApp" class="container-fluid p-2" id="container_login"> 
   <label class="fw-bold">Login</label>
-    <div class="javaerror" style="color:red"></div>
+    <div class="javaerror" style="color:red; position: fixed;"></div>
   <div class="row">
     <div class="div_class">
       <form #loginform="ngForm" (ngSubmit)="userLogin()">
         <div class="form-group my-4">
           <input type="text" id="name" class="form-control" placeholder="Email" name="email" [(ngModel)]="user.email">
-          <span style="position:fixed;top:63px;right: 15px; vertical-align: middle; color: #214e8f;" class="fa fa-envelope-open-o"></span>
+          <span style="position:fixed;top:65px;right: 15px; vertical-align: middle; color: #214e8f;" class="fa fa-envelope-open-o"></span>
         </div>
         <div class="form-group my-4">
           <input type="password" id="email" class="form-control" placeholder="*Password" name="password"

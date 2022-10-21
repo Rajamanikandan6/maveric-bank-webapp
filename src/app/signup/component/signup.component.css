@@ -33,4 +33,5 @@ select{
     margin-top: 23%;
     margin-left: 50%;
     position: fixed;
+    resize: none;
 }
