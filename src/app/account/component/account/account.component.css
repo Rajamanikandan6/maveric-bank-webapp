@@ -1,0 +1,39 @@
+#desc_container{
+    border: black;
+    border-style: outset;
+    box-shadow: 1px 1px 1px black;
+}
+
+#btn_logout{
+    position: fixed;
+    right: 0%;
+}
+
+.alingclass{
+    margin-left: 15%;
+}
+
+
+.accnt_header{
+    background-color: #214e8f;
+    color: white;
+}
+
+.transaction_header{
+    background-color: #214e8f;
+    color: white;
+}
+
+.booticon {
+    display: inline-flex;
+    float: left;
+  }
+
+.scroll_container{
+    overflow-y: scroll;
+    height:10%;
+}
+
+.my_container{
+    position: absolute;
+}
