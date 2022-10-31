@@ -24,8 +24,16 @@
     color: white;
 }
 
-  .booticon {
-    display: inline-block;
+.booticon {
+    display: inline-flex;
     float: left;
-    padding:0px 5px 0px 0px;
   }
+
+.scroll_container{
+    overflow-y: scroll;
+    height:10%;
+}
+
+.my_container{
+    position: absolute;
+}
